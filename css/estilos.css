@@ -1,0 +1,295 @@
+body {
+  font-size: 16px;
+  height: 100vh !important;
+  margin: 0;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  background-color: black;
+  overflow-x: hidden !important;
+}
+
+.contenedor {
+  height: 100vh !important;
+}
+
+.cardVideoBody,
+.animationVideo {
+  padding-left: 0;
+  padding-right: 0;
+}
+.card {
+  border: none;
+  background-color: black;
+}
+
+.logo {
+  animation-name: escalar;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes escalar {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.2;
+  }
+}
+
+.contenido {
+  height: 100vh;
+  overflow-x: hidden !important;
+}
+
+.flechaAbajo {
+  cursor: pointer;
+  animation-name: escalar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4rem;
+  color: white !important;
+}
+
+.logoPeque {
+  animation-duration: 4s;
+  visibility: hidden;
+}
+
+.animation {
+  view-timeline: --subjectReveal block;
+  animation-timeline: --subjectReveal;
+  animation-name: appear;
+  animation-range: entry 10% contain 25%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+
+.section_contenido_texto1 {
+  view-timeline: --subjectTexto1 block;
+  animation-timeline: --subjectTexto1;
+  animation-name: scaleTo;
+  animation-range: entry 50% contain 100%;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+video {
+  animation-name: fadeInVideo;
+  inset: 0;
+  object-fit: cover;
+  z-index: -1;
+  width: 100%; /* Establece el ancho del video al 100% del contenedor */
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+.card {
+  background-color: transparent !important;
+}
+
+span {
+  color: white !important;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@keyframes scaleTo {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(2);
+  }
+}
+
+.textoPedido {
+  view-timeline: --subjectRevealTexto block;
+  animation-timeline: --subjectRevealTexto;
+  animation-name: appear;
+  animation-range: entry 100% contain 1%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+
+.textoPedido p {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+  background-color: rgba(0, 0, 0, 0.158);
+}
+
+.card-header {
+  color: white;
+  font-weight: 500;
+}
+
+.textosNegritas{
+  text-align: center;
+
+}
+.textosNegritas b{
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+small{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+button{
+  color: white !important;
+}
+.precio{
+  color: green !important;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+i{
+  line-height: 2;
+}
+li{
+  display: flex;
+  justify-content: start;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  text-wrap: pretty;
+  margin-right: 0.9rem;
+}
+.whisky{
+  color: black;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.whisky small{
+  color: grey;
+  font-size: 0.70rem;
+}
+
+.bebidasMenu{
+  width: 120px !important;
+  height: 120px !important;
+}
+
+.dropdown-menu.show {
+  position: relative !important;
+  margin-bottom: 4rem !important;
+  margin-top: -3rem !important;
+}
+.ofertaT{
+  color: green;
+}
+.spanAzul{
+  color: blue;
+}
+
+.spanVerdeOferta{
+  color: #038181
+
+}
+#audioPlayer {
+  display: none;
+}
+
+
+/*Media queries*/
+
+
+@media (280px <= width <= 535px) {
+  video {
+    height: 50vh;
+  }
+}
+
+@media (540px <= width <= 820px) {
+  video {
+    height: 100vh;
+  }
+}
+
+@media (912px <= width) {
+  video {
+    height: 100vh;
+  }
+
+}
+
+@media (912px >= width) {
+
+  
+  .dropdown {
+    overflow: hidden;
+    z-index: 1; /* Aseguramos que el botón esté por encima del borde */
+    border: none; /* Eliminamos el borde original de Bootstrap */
+  }
+  
+  .dropdown::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%; /* Hacemos que el borde sea un círculo */
+    border: 8px solid transparent; /* Aumentamos el ancho del border */
+    background: linear-gradient(45deg, #ff00ff, #9400d3, #ff00ff, #9400d3); /* Colores neon morado */
+    z-index: -1;
+    animation: neon-border 2s infinite linear;
+  }
+  
+  @keyframes neon-border {
+    0% {
+        border-color: transparent transparent transparent transparent;
+    }
+    25% {
+        border-color: #ff00ff transparent transparent transparent;
+    }
+    50% {
+        border-color: transparent #9400d3 transparent transparent;
+    }
+    75% {
+        border-color: transparent transparent #ff00ff transparent;
+    }
+    100% {
+        border-color: transparent transparent transparent #9400d3;
+    }
+  }
+
+}
+@media (1024px <= width <= 1920px) {
+  video {
+    height: 100vh;
+  }
+}
