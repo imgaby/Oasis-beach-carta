@@ -6,6 +6,8 @@ body {
     sans-serif;
   background-color: black;
   overflow-x: hidden !important;
+  overflow-y: hidden !important;
+
 }
 
 .contenedor {
@@ -42,6 +44,7 @@ body {
 .contenido {
   height: 100vh;
   overflow-x: hidden !important;
+
 }
 
 .flechaAbajo {
@@ -64,20 +67,11 @@ h2 {
   visibility: hidden;
 }
 
-.animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
-  animation-name: appear;
-  animation-range: entry 10% contain 25%;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-}
-
 .section_contenido_texto1 {
   view-timeline: --subjectTexto1 block;
   animation-timeline: --subjectTexto1;
   animation-name: scaleTo;
-  animation-range: entry 50% contain 100%;
+  animation-range: entry 25% contain 100%;
   animation-fill-mode: both;
   animation-duration: 1ms;
   animation-timing-function: ease-in-out;
@@ -97,12 +91,10 @@ h2 {
 }
 
 video {
-  animation-name: fadeInVideo;
   inset: 0;
   object-fit: cover;
   z-index: -1;
   width: 100%; /* Establece el ancho del video al 100% del contenedor */
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 .card {
   background-color: transparent !important;
