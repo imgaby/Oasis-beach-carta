@@ -73,7 +73,6 @@ h2 {
   animation-name: scaleTo;
   animation-range: entry 25% contain 100%;
   animation-fill-mode: both;
-  animation-duration: 1ms;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
