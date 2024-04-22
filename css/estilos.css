@@ -71,7 +71,7 @@ h2 {
   view-timeline: --subjectTexto1 block;
   animation-timeline: --subjectTexto1;
   animation-name: scaleTo;
-  animation-range: entry 10% contain 100%;
+  animation-range: entry 25% contain 100%;
   animation-fill-mode: both;
   animation-duration: 1ms;
   animation-timing-function: ease-in-out;
