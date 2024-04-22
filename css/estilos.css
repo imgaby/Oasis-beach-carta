@@ -31,6 +31,14 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.animation {
+  view-timeline: --subjectReveal block;
+  animation-timeline: --subjectReveal;
+  animation-name: appear;
+  animation-range: entry 25% contain 50%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
 
 @keyframes escalar {
   from {
@@ -67,15 +75,6 @@ h2 {
   visibility: hidden;
 }
 
-.section_contenido_texto1 {
-  view-timeline: --subjectTexto1 block;
-  animation-timeline: --subjectTexto1;
-  animation-name: scaleTo;
-  animation-range: entry 25% contain 100%;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-}
 
 @keyframes appear {
   from {
@@ -124,7 +123,7 @@ span {
   view-timeline: --subjectRevealTexto block;
   animation-timeline: --subjectRevealTexto;
   animation-name: appear;
-  animation-range: entry 100% contain 1%;
+  animation-range: entry 60% contain 1%;
   animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
