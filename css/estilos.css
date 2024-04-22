@@ -67,6 +67,16 @@ h2 {
   visibility: hidden;
 }
 
+.section_contenido_texto1 {
+  view-timeline: --subjectTexto1 block;
+  animation-timeline: --subjectTexto1;
+  animation-name: scaleTo;
+  animation-range: entry 10% contain 100%;
+  animation-fill-mode: both;
+  animation-duration: 1ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
 
 @keyframes appear {
   from {
@@ -97,8 +107,8 @@ span {
 }
 
 @keyframes scaleTo {
-  0% {
-    opacity: 0;
+  10% {
+    opacity: 0.4;
     transform: scaleX(0);
   }
   50% {
