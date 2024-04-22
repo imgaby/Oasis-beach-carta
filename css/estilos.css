@@ -35,7 +35,7 @@ body {
   view-timeline: --subjectReveal block;
   animation-timeline: --subjectReveal;
   animation-name: appear;
-  animation-range: entry 25% contain 50%;
+  animation-range: entry 24% contain 50%;
   animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
