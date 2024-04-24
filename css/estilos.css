@@ -49,6 +49,15 @@ body {
   }
 }
 
+@keyframes escalar2 {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
+}
+
 .contenido {
   height: 100vh;
   overflow-x: hidden !important;
@@ -63,6 +72,18 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+.textoBuenAmbiente {
+  /* Primera animación */
+  view-timeline: --subjectReveal block;
+  animation-timeline: --subjectReveal;
+  animation-name: appear;
+  animation-range: entry 24% contain 50%;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+
+}
+
 
 h2 {
   text-align: center;
