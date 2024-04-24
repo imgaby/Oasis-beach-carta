@@ -74,9 +74,9 @@ body {
 }
 
 .textoBuenAmbiente {
-  /* Primera animación */
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timeline: --subjectReveal ;
+  animation-timeline: --subjectReveal ;
+  -webkit-animation-name: appear; /* Prefijo para Webkit (Safari, iOS) */
   animation-name: appear;
   animation-range: entry 24% contain 50%;
   animation-fill-mode: both;
