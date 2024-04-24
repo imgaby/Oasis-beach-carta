@@ -76,9 +76,6 @@ body {
 .textoBuenAmbiente {
   view-timeline: --subjectReveal ;
   animation-timeline: --subjectReveal ;
-  -webkit-view-timeline: --subjectReveal ; /* Prefijo para Webkit (Safari, iOS) */
-  -webkit-animation-timeline: --subjectReveal ; /* Prefijo para Webkit (Safari, iOS) */
-  -webkit-animation-name: appear; /* Prefijo para Webkit (Safari, iOS) */
   animation-name: appear;
   animation-range: entry 24% contain 50%;
   animation-fill-mode: both;
@@ -86,6 +83,13 @@ body {
 
 }
 
+.textoBuenAmbienteEscalar {
+  animation-name: escalar2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
 h2 {
   text-align: center;
@@ -154,14 +158,6 @@ span {
   }
 }
 
-.textoPedido {
-  view-timeline: --subjectRevealTexto block;
-  animation-timeline: --subjectRevealTexto;
-  animation-name: appear;
-  animation-range: entry 60% contain 1%;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-}
 
 .textoPedido p {
   display: inline-block;
