@@ -109,6 +109,18 @@ h2 {
   }
 }
 
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 video {
   inset: 0;
   object-fit: cover;
