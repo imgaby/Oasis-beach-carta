@@ -26,11 +26,44 @@ body {
 
 .logo {
   animation-name: escalar;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  object-fit: contain;
+
 }
+
+.neon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,blue);
+  mix-blend-mode: overlay; /* Mezcla el color del overlay con la imagen */
+  opacity: 0; /* Ajusta la opacidad según desees */
+  pointer-events: none; /* Evita que el overlay sea interactivo */
+  animation: neon 6s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  0%, 100% {
+      opacity: 0;
+      background: linear-gradient(to right, #800080, #ffc0cb)
+  }
+  25%, 75% {
+      opacity: 1;
+      background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  50% {
+      opacity: 0.5;
+      background: linear-gradient(to right, #009fff, #ec2f4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}
+
 .animation {
   view-timeline: --subjectReveal block;
   animation-timeline: --subjectReveal;
