@@ -263,6 +263,25 @@ li{
   margin-top: -3rem !important;
   background-color: white !important;
 }
+.dropdown-menu {
+  background-color: white !important;
+}
+@media (prefers-color-scheme: light) {
+  .dropdown-menu.show {
+    background-color: white !important;
+  }
+  .dropdown-menu {
+    background-color: white !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .dropdown-menu.show {
+    background-color: white !important;
+  }
+  .dropdown-menu {
+    background-color: white !important;
+  }
+  }
 .ofertaT{
   color: green;
 }
